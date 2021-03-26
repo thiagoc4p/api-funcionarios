@@ -1,0 +1,4 @@
+/home/t1ma/api-funcionarios/src/main/java/com/example/apifuncionarios/resources/FuncionarioResource.java
+/home/t1ma/api-funcionarios/src/main/java/com/example/apifuncionarios/models/Funcionario.java
+/home/t1ma/api-funcionarios/src/main/java/com/example/apifuncionarios/ApiFuncionariosApplication.java
+/home/t1ma/api-funcionarios/src/main/java/com/example/apifuncionarios/repository/FuncionarioRepository.java
