@@ -8,35 +8,40 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/api")
+@RequestMapping(value = "/api/funcionario")
 public class FuncionarioResource {
 
     @Autowired
     FuncionarioRepository funcionarioRepository;
 
-    @GetMapping("/funcionario")
+    @GetMapping
     public List<Funcionario> listaFuncionario() {
         return funcionarioRepository.findAll();
     }
 
-    @GetMapping("/funcionario/{id}")
+    @GetMapping("/{id}")
     public Funcionario listaFuncionarioById(@PathVariable(value = "id") long id) {
         return funcionarioRepository.findById(id);
     }
 
-    @PostMapping("/funcionario")
+    @PostMapping
     public Funcionario addFuncionario(@RequestBody Funcionario funcionario) {
         return funcionarioRepository.save(funcionario);
     }
 
-    @DeleteMapping("/funcionario")
+    @DeleteMapping
     public void deleteFuncionario(@RequestBody Funcionario funcionario) {
         funcionarioRepository.delete(funcionario);
     }
 
-    @PutMapping("/funcionario")
+    @PutMapping("/update")
     public Funcionario updateFuncionario(@RequestBody Funcionario funcionario) {
         return funcionarioRepository.save(funcionario);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public void deleteFuncionarioById(@PathVariable(value = "id") long id) {
+        funcionarioRepository.deleteById(id);
     }
 
 }

@@ -6,5 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface FuncionarioRepository extends JpaRepository<Funcionario, Long> {
 
     Funcionario findById(long id);
+    void deleteById(long id);
 
 }
